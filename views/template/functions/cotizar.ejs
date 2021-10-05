@@ -1,0 +1,27 @@
+function cotizar() {
+    // Configuración para Mascota
+    var valorAnimal = document.getElementById("miAnimal").value;
+    var numeroAnimal = parseInt(valorAnimal);
+    console.log(typeof numeroAnimal + valorAnimal);
+    console.log(numeroAnimal);
+
+
+    // Configuración para Mascota
+    var tamanoAnimal = document.getElementById("miTamano").value;
+    var tamanosAnimal = parseInt(tamanoAnimal);
+    console.log(typeof tamanosAnimal + tamanoAnimal);
+    console.log(tamanosAnimal);
+
+
+    // Configuración para Ruta
+    var ruta = document.getElementById("miRuta").value;
+    var precioRuta = parseInt(ruta);
+    console.log(typeof precioRuta + ruta);
+    console.log(precioRuta);
+
+
+    // Suma Final
+    var sumaFinal = numeroAnimal + tamanosAnimal + precioRuta;
+    document.getElementById("suma").innerHTML = '$ ' + sumaFinal;
+
+  }

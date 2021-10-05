@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles.css" />
+  <title>Cotizador</title>
+</head>
+
+<body>
+  <header>
+    <ul>
+      <a href="/">
+        <li>Homepage</li>
+      </a>
+      <a href="/nosotros">
+        <li>Nosotros</li>
+      </a>
+      <a href="/cotizador">
+        <li>Cotizador</li>
+      </a>
+    </ul>
+  </header>
+
+
+  <form method="GET" action="/nosotros" name="cotizacion" class="cotizador">
+
+    <p>¿Qué mascota enviarás?</p>
+    <select name="Animal" id="miAnimal">
+      <option value="perro">Perro</option>
+      <option value="gato">Gato</option>
+      <option value="rinoceronte">Rinoceronte</option>
+      <option value="ballena sanguinaria">Ballena sanguinaría</option>
+      <option value="otro">Otro</option>
+    </select>
+
+
+    <p>Elige el tamaño de tu mascota</p>
+    <select name="Tamano" id="miTamano">
+      <option value="menor a poodle">Menor a Poodle</option>
+      <option value="entre poodle y labrador">Entre Poodle y Labrador</option>
+      <option value="mayor a labrador">Mayor a Labrador</option>
+    </select>
+
+
+    <p>Destino y origen</p>
+    <select name="Ruta" id="miRuta">
+      <option value="cdmx-jalisco">CDMX-Jalisco</option>
+      <option value="jalisco-cdmx">Jalisco-CDMX</option>
+      <option value="cdmx-LA">CDMX-Los Ángeles</option>
+      <option value="cdmx-madrid">CDMX-Madrid</option>
+    </select>
+
+    <div id="cliente">
+      <p>Datos cliente</p>
+      <label for="nombre">Nombre completo</label>
+      <input type="text" name="nombre" required>
+
+      <label for="correo">Correo</label>
+      <input type="email" name="correo" required>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <input type="button" onclick="cotizar()" value="Cotizar" />
+
+    <br>
+    <br>
+    <br>
+    <h1>Aproximadamente pagarías:</h1>
+    <h1 id="suma"></h1>
+
+    <div id="env">
+      <input type="submit" onclick="enviar()" value="enviar datos">
+    </div>
+  </form>
+
+  <script src="./scripts/cotizar.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    function enviar() {
+      var datosCliente = document.getElementById('cliente');
+      datosCliente.style.display = "block";
+    }
+  </script>
+
+
+
+</body>
+
+</html>

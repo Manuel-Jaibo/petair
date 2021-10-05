@@ -1,0 +1,11 @@
+.cotizador{
+    border-style: solid;
+}
+
+#cliente{
+    display: none;
+}
+
+#env{
+    display: none;
+}
